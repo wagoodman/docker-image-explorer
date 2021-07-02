@@ -132,6 +132,17 @@ go get github.com/wagoodman/dive
 ```
 *Note*: installing in this way you will not see a proper version when running `dive -v`.
 
+**Nix/NixOS**
+
+On NixOS:
+```bash
+nix-env -iA nixos.dive
+```
+On non-NixOS (Linux, Mac)
+```bash
+nix-env -iA nixpkgs.dive
+```
+
 **Docker**
 ```bash
 docker pull wagoodman/dive
