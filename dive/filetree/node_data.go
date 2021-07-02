@@ -5,7 +5,7 @@ var GlobalFileTreeCollapse bool
 // NodeData is the payload for a FileNode
 type NodeData struct {
 	ViewInfo ViewInfo
-	FileInfo FileInfo
+	FileInfo FileInfo `json:"fileInfo"`
 	DiffType DiffType
 }
 
