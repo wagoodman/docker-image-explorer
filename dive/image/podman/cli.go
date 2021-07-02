@@ -40,6 +40,7 @@ func streamPodmanCmd(args ...string) (error, io.Reader) {
 	if err != nil {
 		return err, nil
 	}
+	defer writer.Close()
 
 	cmd.Stdout = writer
 	cmd.Stderr = os.Stderr
