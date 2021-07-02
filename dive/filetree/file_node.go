@@ -321,5 +321,13 @@ func (node *FileNode) compare(other *FileNode) DiffType {
 		panic("comparing mismatched nodes")
 	}
 
-	return node.Data.FileInfo.Compare(other.Data.FileInfo)
+	if node.Parent == other.Parent {
+		return Unmodified
+	}
+
+	// If any of the other previous checks don't pass, then the other node is
+	// present in both layers. It doesn't really matter //why//; whatever
+	// built the image already made the decision that the file was modified
+	// and decided to include it in the layer.
+	return Modified
 }
