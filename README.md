@@ -13,6 +13,15 @@ To analyze a Docker image simply run dive with an image tag/id/digest:
 dive <your-image-tag>
 ```
 
+or you can dive with docker command directly
+```
+alias dive="docker run -ti --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive"
+dive <your-image-tag>
+
+# for example
+dive nginx:latest
+```
+
 or if you want to build your image then jump straight into analyzing it:
 ```bash
 dive build -t <some-tag> .
