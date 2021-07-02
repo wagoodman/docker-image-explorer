@@ -77,7 +77,7 @@ func initConfig() {
 	viper.SetDefault("log.path", "./dive.log")
 	viper.SetDefault("log.enabled", false)
 	// keybindings: status view / global
-	viper.SetDefault("keybinding.quit", "ctrl+c")
+	viper.SetDefault("keybinding.quit", "ctrl+c,q")
 	viper.SetDefault("keybinding.toggle-view", "tab")
 	viper.SetDefault("keybinding.filter-files", "ctrl+f, ctrl+slash")
 	// keybindings: layer view
